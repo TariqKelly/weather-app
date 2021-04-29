@@ -48,7 +48,7 @@ function App() {
     <div className={(typeof weather.main != "undefined") ? (weather.weather[0].main === "Clouds" ? "App cloudy": weather.weather[0].main === "Clear" ? "App clear" : weather.weather[0].main === "Thunderstorm" || weather.weather[0].main === "Drizzle" || weather.weather[0].main === "Rain" ? "App rainy" : weather.weather[0].main === "Snow" ? "App snow" : "App") : "App"}>
       <main>
         <div className="search-box">
-          <input type = "text" className="search-bar" placeholder= "Search..." onChange={ e => setQuery(e.target.value)} value={query} onKeyPress={search}></input>
+          <input type = "text" className="search-bar" placeholder= "Search for a city..." onChange={ e => setQuery(e.target.value)} value={query} onKeyPress={search}></input>
         </div>
 
         {(typeof weather.main != "undefined") ? (
